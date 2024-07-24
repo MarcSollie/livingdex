@@ -2,12 +2,13 @@ import Image from 'next/image'
 
 import PageMeta from '@/features/pages/components/PageMeta'
 import { abs_url } from '@/lib/components/Links'
+import { getHostname } from '@/lib/utils/env'
 
 const Page = () => {
   return (
     <div className={'page-container'} style={{ maxWidth: 'none' }}>
       <PageMeta
-        metaTitle={'Thank you! - Supereffective.gg'}
+        metaTitle={'Thank you! - ' + getHostname()}
         metaDescription={''}
         robots={'noindex,nofollow'}
         canonicalUrl={abs_url('/donate')}

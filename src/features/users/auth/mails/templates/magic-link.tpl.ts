@@ -1,3 +1,5 @@
+import { getHostname } from "@/lib/utils/env"
+
 const renderHtml = (url: string, token: string): string => {
   return `
   <html>
@@ -25,10 +27,10 @@ const renderHtml = (url: string, token: string): string => {
     </style>
   </head>
   <body>
-  <h2>Sign in to SuperEffective.gg</h2>
+  <h2>Sign in to `+getHostname()+`</h2>
 
   <p>
-    You have requested to sign in to SuperEffective.gg with this email address.
+    You have requested to sign in to `+getHostname()+` with this email address.
     If you did not request access to our site with this email, you can safely ignore it.
   </p>
 
@@ -51,9 +53,9 @@ const renderHtml = (url: string, token: string): string => {
 
 const renderText = (url: string, token: string): string => {
   return `
-  Sign in to SuperEffective.gg
+  Sign in to `+getHostname()+`
 
-  You have requested to sign in to SuperEffective.gg with this email address.
+  You have requested to sign in to `+getHostname()+` with this email address.
 
   If you did not request access to our site with this email, you can safely ignore it.
 

@@ -23,18 +23,6 @@ const appConfig = {
       'in your journey as a trainer. Follow us to stay up-to-date.',
   },
   links: {
-    twitter: 'https://mobile.twitter.com/supereffectiv',
-    patreon: 'https://www.patreon.com/supereffective',
-    github: 'https://github.com/itsjavi',
-    github_org: 'https://github.com/supeffective',
-    github_site: 'https://github.com/supeffective/website',
-    issue_report: 'https://github.com/supeffective/website/issues',
-    roadmap: 'https://supereffective.canny.io',
-    feedback: 'https://supereffective.canny.io/feature-requests',
-    changelog: 'https://supereffective.canny.io/changelog',
-    discord: 'https://discord.gg/3fRXQFtrkN',
-    paypal_donate: 'https://www.paypal.me/itsjavidotcom/10',
-    legacy_account_recovery_form: 'https://forms.gle/HxnV3qCs1UWJn7Tc6',
   },
   patreon: {
     oauthRedirectUrl: `${getBaseUrl()}/api/callbacks/patreon`,

@@ -6,10 +6,7 @@ import { useState } from 'react'
 import config from '@/config'
 import { UserTrayView } from '@/features/users/views/UserTrayView'
 
-import { MessageSquareTextIcon } from 'lucide-react'
-import CannyFeedbackLinkV3 from '../CannyFeedbackLinkV3'
 import { SiteLink } from '../Links'
-import { DiscordLinkIcon, TwitterLinkIcon } from '../icons/brand-icons'
 import styles from './MainHeader.module.css'
 
 export default function MainHeader() {
@@ -45,28 +42,7 @@ export default function MainHeader() {
             <SiteLink activeClass={styles.active} tabIndex={2} href="/apps/livingdex">
               <i className={'icon-pkg-box margin-r icon--2x'} /> Living Dex Tracker
             </SiteLink>
-            <DiscordLinkIcon className={styles.brandLink} tabIndex={4}>
-              <span className="mobile-only">Discord</span>
-            </DiscordLinkIcon>
-            <TwitterLinkIcon className={styles.brandLink} tabIndex={3}>
-              <span className="mobile-only">Twitter/X</span>
-            </TwitterLinkIcon>
-            <CannyFeedbackLinkV3>
-              <i title="Roadmap and Feedback">
-                <MessageSquareTextIcon />
-              </i>
-              <span className="mobile-only">Feedback & Roadmap</span>
-            </CannyFeedbackLinkV3>
-            <SiteLink
-              // className={styles.donateBtn}
-              activeClass={styles.active}
-              href="/donate"
-              tabIndex={5}
-              title={'Donate to help this site'}
-            >
-              <i className="icon-pkg-mark-heart" title="Donate" />
-              <span className={'mobile-only'}>Support Us</span>
-            </SiteLink>
+            
             <UserTrayView activeClass={styles.active} returnUrl={pageSrc} />
           </nav>
 

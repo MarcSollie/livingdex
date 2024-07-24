@@ -4,12 +4,13 @@ import PageMeta from '@/features/pages/components/PageMeta'
 import { createCsrfToken } from '@/features/users/auth/serverside/createCsrfToken'
 import { LoginView } from '@/features/users/views/LoginView'
 import { abs_url } from '@/lib/components/Links'
+import { getHostname } from '@/lib/utils/env'
 
 const Page = ({ csrfToken }: { csrfToken: string | null }) => {
   return (
     <div className={'page-container'}>
       <PageMeta
-        metaTitle={'Sign In - Supereffective.gg'}
+        metaTitle={'Sign In - ' + getHostname()}
         metaDescription={''}
         robots={'noindex, nofollow'}
         canonicalUrl={abs_url('/login')}

@@ -2,6 +2,7 @@ import { useRouter } from 'next/compat/router'
 
 import PageMeta from '@/features/pages/components/PageMeta'
 import { abs_url } from '@/lib/components/Links'
+import { getHostname } from '@/lib/utils/env'
 
 //
 
@@ -17,7 +18,7 @@ export default function Page() {
     <>
       <div className={'page-container'}>
         <PageMeta
-          metaTitle={'Sign In error - Supereffective.gg'}
+          metaTitle={'Sign In error - ' + getHostname()}
           metaDescription={''}
           robots={'noindex, nofollow'}
           canonicalUrl={abs_url('/auth/error')}

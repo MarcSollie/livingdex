@@ -3,6 +3,7 @@ import { sendMail } from '@/lib/mailer/sendMail'
 import { EmailMessage } from '@/lib/mailer/types'
 import { base64Encode } from '@/lib/utils/serialization/base64'
 
+import { getHostname } from '@/lib/utils/env'
 import { SendVerificationRequestParams } from 'next-auth/providers/email'
 import pageConfig from '../../pageConfig'
 import { renderHtml, renderText } from '../templates/magic-link.tpl'
@@ -30,7 +31,7 @@ const sendMagicLinkEmail = async (params: SendVerificationRequestParams) => {
   const message: EmailMessage = {
     to: identifier,
     // from: 'noreply@supereffective.gg',
-    subject: `Sign in to SuperEffective.gg`,
+    subject: `Sign in to ` + getHostname(),
     body: {
       text: renderText(middlePageUrl, token),
       html: renderHtml(middlePageUrl, token),

@@ -1,8 +1,8 @@
-import { isDevelopmentEnv, isProductionEnv, isServerSide } from './env'
+import { getHostname, isDevelopmentEnv, isProductionEnv, isServerSide } from './env'
 
 export function getBaseUrl(): string {
   if (isProductionEnv()) {
-    return 'https://supereffective.gg'
+    return 'https://' + getHostname()
   }
 
   // get absolute url in client/browser

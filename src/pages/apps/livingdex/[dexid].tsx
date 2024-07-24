@@ -8,12 +8,13 @@ import LivingDexApp from '@/features/livingdex/views/LivingDexApp'
 import PageMeta from '@/features/pages/components/PageMeta'
 import { abs_url } from '@/lib/components/Links'
 import { getGameSetByGameId } from '@/lib/data-client/game-sets'
+import { getHostname } from '@/lib/utils/env'
 import { logger } from '@/lib/utils/logger'
 import { deserializeObject, serializeObject } from '@/lib/utils/serialization/jsonSerializable'
 
 const Page = ({ dexData, presets }: { dexData: any; presets: PresetDexMap }) => {
   const dex = deserializeObject<LoadedDex>(dexData)
-  const metaTitle = `${dex.title} | Supereffective.gg Pokédex Tracker`
+  const metaTitle = `${dex.title} | `+getHostname()+` Pokédex Tracker`
   const metaDescription = `${dex.title}, a Pokémon Living Dex created with Supereffective's Living Pokédex Tracker app. Caught ${dex.caughtRegular} / ${dex.totalRegular}.`
   const gameSet = getGameSetByGameId(dex.gameId)
   const gameSetId = gameSet.id

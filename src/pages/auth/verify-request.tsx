@@ -7,6 +7,7 @@ import { ButtonLink } from '@/lib/components/Button'
 import { abs_url } from '@/lib/components/Links'
 import { LoadingBanner } from '@/lib/components/panels/LoadingBanner'
 import { LoadingRedirectBanner } from '@/lib/components/panels/LoadingRedirectBanner'
+import { getHostname } from '@/lib/utils/env'
 import { base64Decode } from '@/lib/utils/serialization/base64'
 
 export default function Page() {
@@ -24,7 +25,7 @@ export default function Page() {
     return (
       <div className={'page-container'}>
         <PageMeta
-          metaTitle={'Confirm Sign In - Supereffective.gg'}
+          metaTitle={'Confirm Sign In - ' + getHostname()}
           metaDescription={''}
           robots={'noindex, nofollow'}
           canonicalUrl={abs_url('/auth/verify-request')}

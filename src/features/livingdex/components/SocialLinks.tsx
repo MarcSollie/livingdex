@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { classNameIf, classNames } from '@/lib/utils/deprecated'
+import { getHostname } from '@/lib/utils/env'
 
 import { abs_url } from '../../../lib/components/Links'
 import styles from './SocialLinks.module.css'
@@ -146,11 +147,11 @@ export const DexSocialLinks = ({
   const dexLink = `/apps/livingdex/${dexId}`
 
   const ownerText =
-    "Check out all Pokémon I have on my Living Dex, created with supereffective.gg 's" +
+    "Check out all Pokémon I have on my Living Dex, created with "+getHostname()+" 's" +
     ' Living Pokédex Organizer app. #LivingDex #PokedexTracker #Pokemon #PokemonHOME #PokemonScarletViolet'
 
   const nonOwnerText =
-    "Check out this Living Dex, created with supereffective.gg 's" +
+    "Check out this Living Dex, created with "+getHostname()+" 's" +
     ' Living Pokédex Organizer app. #LivingDex #PokedexTracker #Pokemon #PokemonHOME #PokemonScarletViolet'
 
   return (

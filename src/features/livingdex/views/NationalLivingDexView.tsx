@@ -9,6 +9,7 @@ import Button from '@/lib/components/Button'
 import { abs_url } from '@/lib/components/Links'
 import { LoadingBanner } from '@/lib/components/panels/LoadingBanner'
 import { classNameIf } from '@/lib/utils/deprecated'
+import { getHostname } from '@/lib/utils/env'
 
 const NationalLivingDexView = () => {
   const [selectedPreset, setSelectedPreset] = React.useState<string>('grouped-region')
@@ -22,7 +23,7 @@ const NationalLivingDexView = () => {
   return (
     <div className={'page-container dex-game dex-game-home'} style={{ maxWidth: 'none' }}>
       <PageMeta
-        metaTitle={'Full Living Pokédex - All Regions | Pokédex Tracker Online Tool - SuperEffective.gg'}
+        metaTitle={'Full Living Pokédex - All Regions | Pokédex Tracker Online Tool - ' + getHostname()}
         metaDescription={
           'Full Living Pokédex visual guide. Overview of all Pokémon species and forms that ' +
           'are currently storable in Pokémon HOME.'

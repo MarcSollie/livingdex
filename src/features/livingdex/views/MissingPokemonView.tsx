@@ -14,6 +14,7 @@ import { LegacyGame } from '@/lib/data-client/games/types'
 import { getPokemonEntries, getPokemonSearchIndex } from '@/lib/data-client/pokemon'
 import { PokemonEntry } from '@/lib/data-client/pokemon/types'
 import { useScrollToLocation } from '@/lib/hooks/useScrollToLocation'
+import { getHostname } from '@/lib/utils/env'
 
 import styles from './MissingPokemonView.module.css'
 
@@ -122,7 +123,7 @@ const MissingPokemonView = () => {
   return (
     <div className={'page-container'} style={{ maxWidth: 'none' }}>
       <PageMeta
-        metaTitle={'Missing Pokémon - Living Pokédex Tracker - Supereffective.gg'}
+        metaTitle={'Missing Pokémon - Living Pokédex Tracker - ' + getHostname()}
         metaDescription={''}
         robots={'noindex,nofollow'}
         canonicalUrl={abs_url('/apps/livingdex/missing')}

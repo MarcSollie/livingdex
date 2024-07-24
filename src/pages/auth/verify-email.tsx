@@ -11,6 +11,7 @@ import Button from '@/lib/components/Button'
 import { abs_url } from '@/lib/components/Links'
 import { LoadingBanner } from '@/lib/components/panels/LoadingBanner'
 import { UnauthenticatedBanner } from '@/lib/components/panels/UnauthenticatedBanner'
+import { getHostname } from '@/lib/utils/env'
 
 export default function Page({ csrfToken }: { csrfToken: string | null }) {
   const auth = useSession()
@@ -34,7 +35,7 @@ export default function Page({ csrfToken }: { csrfToken: string | null }) {
     <>
       <div className={'page-container'}>
         <PageMeta
-          metaTitle={'Verify Email - Supereffective.gg'}
+          metaTitle={'Verify Email - ' + getHostname()}
           metaDescription={''}
           robots={'noindex, nofollow'}
           canonicalUrl={abs_url('/auth/verify-email')}

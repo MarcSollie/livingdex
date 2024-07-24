@@ -6,6 +6,7 @@ import { Routes } from '@/config/routes'
 import PageMeta from '@/features/pages/components/PageMeta'
 import { ButtonInternalLink } from '@/lib/components/Button'
 import { abs_url } from '@/lib/components/Links'
+import { getHostname } from '@/lib/utils/env'
 
 export default function Page() {
   const router = useRouter()
@@ -31,7 +32,7 @@ export default function Page() {
     <>
       <div className={'page-container'}>
         <PageMeta
-          metaTitle={'Sign In error - Supereffective.gg'}
+          metaTitle={'Sign In error - ' + getHostname()}
           metaDescription={''}
           robots={'noindex, nofollow'}
           canonicalUrl={abs_url('/auth/error')}

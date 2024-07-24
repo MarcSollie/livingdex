@@ -1,12 +1,13 @@
 import PageMeta from '@/features/pages/components/PageMeta'
 import { ButtonLink } from '@/lib/components/Button'
 import { abs_url } from '@/lib/components/Links'
+import { getHostname } from '@/lib/utils/env'
 
 const Page = () => {
   return (
     <div className={'page-container'} style={{ maxWidth: 'none' }}>
       <PageMeta
-        metaTitle={'Donate - Supereffective.gg'}
+        metaTitle={'Donate - ' + getHostname()}
         metaDescription={''}
         robots={'noindex,nofollow'}
         canonicalUrl={abs_url('/donate')}

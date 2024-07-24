@@ -6,6 +6,7 @@ import { ButtonLink } from '@/lib/components/Button'
 import { abs_url } from '@/lib/components/Links'
 import { classNameIf, classNames } from '@/lib/utils/deprecated'
 
+import { getAdminName, getHostname } from '@/lib/utils/env'
 import PageMeta, { PageMetaProps } from '../components/PageMeta'
 import styles from './ArticleEntry.module.css'
 
@@ -214,18 +215,18 @@ export function ArticlePage(props: ArticlePageProps) {
     dateModified: isoDate,
     author: {
       '@type': 'Person',
-      name: 'Javi Aguilar',
-      url: 'https://supereffective.gg/about',
+      name: getAdminName(),
+      url: 'https://'+getHostname()+'/about',
       contactPoint: {
         '@type': 'ContactPoint',
       },
     },
     publisher: {
       '@type': 'Organization',
-      name: 'supereffective.gg',
+      name: getHostname(),
       logo: {
         '@type': 'ImageObject',
-        url: 'https://supereffective.gg/images/logo/logo.png',
+        url: 'https://'+getHostname()+'/images/logo/logo.png',
       },
       contactPoint: {
         '@type': 'ContactPoint',

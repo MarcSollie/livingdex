@@ -2,13 +2,14 @@
 
 import PageMeta from '@/features/pages/components/PageMeta'
 import { abs_url } from '@/lib/components/Links'
+import { getHostname } from '@/lib/utils/env'
 
 export default function Page() {
   return (
     <>
       <div className={'page-container'}>
         <PageMeta
-          metaTitle={'Verification sent - Supereffective.gg'}
+          metaTitle={'Verification sent - ' + getHostname()}
           metaDescription={''}
           robots={'noindex, nofollow'}
           canonicalUrl={abs_url('/auth/signin-sent')}

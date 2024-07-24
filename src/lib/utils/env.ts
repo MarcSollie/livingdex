@@ -51,3 +51,11 @@ export function isDebugEnabled(): boolean {
 export function isGithubActions(): boolean {
   return process.env.GITHUB_ACTIONS === '1' || process.env.GITHUB_ACTIONS === 'true'
 }
+
+export function getHostname(): string {
+  return process.env.APP_HOSTNAME ?? 'localhost'
+}
+
+export function getAdminName(): string {
+  return process.env.ADMIN_NAME ?? ''
+}
