@@ -21,6 +21,9 @@ const serverVars = z.object({
   // patreon
   PATREON_APP_CLIENT_ID: z.string(),
   PATREON_APP_CLIENT_SECRET: z.string(),
+  APP_HOSTNAME: z.string(),
+  CACHE_HOST: z.string(),
+  ADMIN_NAME: z.string().optional(),
   // PATREON_CLIENT_ID: z.string(),
   // PATREON_CLIENT_SECRET: z.string(),
   // PATREON_CREATOR_ACCESS_TOKEN: z.string(),
