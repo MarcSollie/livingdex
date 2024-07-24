@@ -1,9 +1,8 @@
-# SuperEffective
+# LivingDex
 
-[![Check Code Quality](https://github.com/supeffective/website/actions/workflows/quality.yml/badge.svg)](https://github.com/supeffective/website/actions/workflows/quality.yml)
-[![wakatime](https://wakatime.com/badge/user/f2eacdee-569c-4e49-b11f-81a764fb575e/project/838d78e4-9190-4513-9c76-0e7672feab70.svg)](https://wakatime.com/badge/user/f2eacdee-569c-4e49-b11f-81a764fb575e/project/838d78e4-9190-4513-9c76-0e7672feab70)
+Stripped down fork of the source code for supereffective.gg 's website.
 
-Source code for supereffective.gg 's website.
+Most changes are basically to make hostname configurable and remove specific information. Mostly to make it suited for prive (internal) usage.
 
 Data can be found in https://github.com/supeffective/dataset
 
