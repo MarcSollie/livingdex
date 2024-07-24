@@ -2,7 +2,6 @@ import config from '@/config'
 
 import CannyFeedbackLinkV3 from '../CannyFeedbackLinkV3'
 import { ExternLink, SiteLink } from '../Links'
-import { DiscordLinkIcon, GithubLinkIcon, TwitterLinkIcon } from '../icons/brand-icons'
 import { LogoWhite } from '../layout/LogoWhite'
 import styles from './MainFooter.module.css'
 
@@ -78,16 +77,6 @@ export default function MainFooter() {
             </li>
           </ul>
         </nav>
-        <div className={styles.mainItem}>
-          <p className={titleClass}>Follow Us</p>
-          <ul>
-            <li className={styles.socialList}>
-              <TwitterLinkIcon className={styles.brandLink} />
-              <DiscordLinkIcon className={styles.brandLink} />
-              <GithubLinkIcon className={styles.brandLink} />
-            </li>
-          </ul>
-        </div>
       </section>
 
       <section className={styles.legalBanner}>
