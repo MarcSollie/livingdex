@@ -59,3 +59,7 @@ export function getHostname(): string {
 export function getAdminName(): string {
   return process.env.ADMIN_NAME ?? ''
 }
+
+export function getCacheHost(): string {
+  return process.env.CACHE_HOST ?? ''
+}
