@@ -57,6 +57,10 @@ const initialEnvVars: InitialProjectEnvVars = {
   // patreon
   PATREON_APP_CLIENT_ID: process.env.PATREON_APP_CLIENT_ID,
   PATREON_APP_CLIENT_SECRET: process.env.PATREON_APP_CLIENT_SECRET,
+
+  APP_HOSTNAME: process.env.APP_HOSTNAME,
+  CACHE_HOST: process.env.CACHE_HOST,
+  ADMIN_NAME: process.env.ADMIN_NAME,
 }
 
 export const envVars = parseEnvVars<ProjectEnvVars>(initialEnvVars, {

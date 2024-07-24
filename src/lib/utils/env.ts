@@ -61,5 +61,5 @@ export function getAdminName(): string {
 }
 
 export function getCacheHost(): string {
-  return process.env.CACHE_HOST ?? ''
+  return process.env.CACHE_HOST ?? 'cdn.localhost'
 }
