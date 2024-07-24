@@ -27,28 +27,12 @@ export default function MainFooter() {
             <li>
               <SiteLink href="/about">About This Site</SiteLink>
             </li>
-            <li>
-              <ExternLink href={config.links.roadmap}>Roadmap</ExternLink>
-            </li>
-            <li>
-              <ExternLink href={config.links.changelog}>Changelog</ExternLink>
-            </li>
           </ul>
         </nav>
 
         <div className={styles.mainItem}>
           <p className={titleClass}>Contributing</p>
           <ul>
-            <li>
-              <SiteLink href="/donate" title={'Donate to the developer to help keep this site running'}>
-                <span>Donations</span>
-              </SiteLink>
-            </li>
-            <li>
-              <ExternLink href={config.links.github_org} title={''}>
-                <span>Source Code</span>
-              </ExternLink>
-            </li>
             <li>
               <SiteLink href="/license">Project Licenses</SiteLink>
             </li>
